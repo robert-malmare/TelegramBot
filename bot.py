@@ -62,7 +62,7 @@ NOTITE_VSCODE = {
 # Funcții
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Comanda /start primită")
-    text = escape_markdown("👋 Bun venit, QA Team!\nSunt asistentul tău digital, gata să îți faciliteze munca de zi cu zi. Tastează /notite_list pentru a explora comenzile disponibile!\nEx: /sqlots, /notite_bug, /notite_teamwork, /notite_git.", version=2)
+    text = escape_markdown("👋 Bun venit, QA!\nSunt asistentul tău digital, gata să îți faciliteze munca de zi cu zi. \nTastează /notite_list pentru a explora comenzile disponibile!\nEx: /sqlots, /notite_bug, /notite_teamwork, /notite_git.", version=2)
     await update.message.reply_text(text, parse_mode="MarkdownV2")
 
 async def notite_list(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
