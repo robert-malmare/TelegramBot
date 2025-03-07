@@ -70,7 +70,7 @@ async def notite_list(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     lista_mesaje = escape_markdown("📌 **Lista de notițe disponibile:**\n", version=2)
     for notite_dict in [SQLSugar, NOTITE_BUG, NOTITE_TEAMWORK, NOTITE_GIT, NOTITE_VSCODE]:
         lista_mesaje += "\n".join([f"🔹 `{escape_markdown(cheie, version=2)}`" for cheie in notite_dict.keys()]) + escape_markdown("\n", version=2)
-    footer = escape_markdown("\n👉 Folosește `/notite <cheie>` pentru detalii. Ex: `/notite sql_last_users`", version=2)
+    footer = escape_markdown("\n👉 Folosește `/notite <cheie>` pentru detalii. \nEx: `/notite sql_last_users`", version=2)
     await update.message.reply_text(f"{lista_mesaje}{footer}", parse_mode="MarkdownV2")
 
 async def notite(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
